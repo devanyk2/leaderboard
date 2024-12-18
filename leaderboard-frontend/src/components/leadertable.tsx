@@ -7,6 +7,7 @@ interface entry{
   
 
 export default function LeaderTable( {entries}: entry[] ) {
+    entries.sort( (a:entry, b:entry) => (b.score - a.score));
     return (
         <ol>
             { entries.map( (ent: entry) => (
